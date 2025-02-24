@@ -1,0 +1,133 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Table des catégories de matériel
+model categorie {
+  id       Int        @id @default(autoincrement())
+  nom      String     @unique(map: "Categorie_nom_key")
+  // Relation avec les commandes : une catégorie peut avoir plusieurs commandes
+  commande commande[]
+}
+
+// Table des entités (bureaux)
+model entite {
+  id       Int        @id @default(autoincrement())
+  nom      String     @unique(map: "Entite_nom_key")
+  // Relations : une entité peut avoir plusieurs commandes et utilisateurs
+  commande commande[]
+  user     user[]
+}
+
+// Table des fournisseurs
+model fournisseur {
+  id       Int        @id @default(autoincrement())
+  nom      String     @unique(map: "Fournisseur_nom_key")
+  // Relation : un fournisseur peut avoir plusieurs commandes
+  commande commande[]
+}
+
+// Table des utilisateurs
+model user {
+  id                  Int          @id @default(autoincrement())
+  nom                 String
+  prenom             String
+  email              String       @unique
+  role               user_role    @default(utilisateur)
+  entiteId           Int
+  isActive           Boolean      @default(true)
+  date_creation      DateTime     @default(now())
+  derniere_connexion DateTime?
+
+  // Relations avec les commandes et l'entité
+  commandes_initiees   commande[]   @relation("commande_initiateurIdTouser")
+  commandes_utilisees  commande[]   @relation("commande_utilisateurIdTouser")
+  entite              entite       @relation(fields: [entiteId], references: [id], onDelete: Cascade)
+  // Relation avec les validations
+  validations         validation[]
+
+  @@index([entiteId], map: "User_entiteId_fkey")
+}
+
+// Table principale des commandes
+model commande {
+  id                Int           @id @default(autoincrement())
+  libelle           String
+  quantite          Int
+  montant           Decimal       @db.Decimal(10, 2)
+  ref_facture       String?       @unique
+  commentaire       String?
+  date_creation     DateTime      @default(now())
+  date_modification DateTime      @default(now()) @updatedAt
+  
+  // Clés étrangères
+  entiteId          Int
+  fournisseurId     Int
+  initiateurId      Int
+  utilisateurId     Int
+  categorieId       Int
+  
+  // État de la commande
+  etat              commande_etat @default(commande)
+
+  // Relations avec contraintes de suppression en cascade
+  categorie    categorie   @relation(fields: [categorieId], references: [id], onDelete: Cascade)
+  entite       entite      @relation(fields: [entiteId], references: [id], onDelete: Cascade)
+  fournisseur  fournisseur @relation(fields: [fournisseurId], references: [id], onDelete: Cascade)
+  
+  // Relations avec les utilisateurs
+  user_commande_initiateurIdToUser    user  @relation("commande_initiateurIdTouser", fields: [initiateurId], references: [id], onDelete: Cascade)
+  user_commande_utilisateurIdToUser   user  @relation("commande_utilisateurIdTouser", fields: [utilisateurId], references: [id], onDelete: Cascade)
+  
+  // Relation avec la validation
+  validation   validation?
+
+  // Index pour optimiser les recherches
+  @@index([categorieId])
+  @@index([entiteId])
+  @@index([fournisseurId])
+  @@index([initiateurId])
+  @@index([utilisateurId])
+}
+
+// Table des validations de commandes
+model validation {
+  id              Int               @id @default(autoincrement())
+  commandeId      Int               @unique
+  statut          validation_statut
+  date_validation DateTime
+  validateur_id   Int
+  commentaire     String?
+
+  // Relations avec contraintes de suppression en cascade
+  commande    commande    @relation(fields: [commandeId], references: [id], onDelete: Cascade)
+  validateur  user        @relation(fields: [validateur_id], references: [id], onDelete: Cascade)
+
+  @@index([validateur_id])
+}
+
+// Énumérations pour les différents statuts
+enum user_role {
+  admin
+  associe
+  utilisateur
+}
+
+enum commande_etat {
+  commande
+  expedie
+  recu
+  retourne
+}
+
+enum validation_statut {
+  en_attente
+  approuve
+  refuse
+}
