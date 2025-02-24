@@ -16,8 +16,7 @@ export async function GET() {
         date_creation: 'desc'
       }
     })
-    return NextResponse.json(commandes)
-    
+    return NextResponse.json(commandes);
   } catch (error) {
     console.error('Erreur lors de la récupération des commandes:', error)
     return NextResponse.json(
