@@ -33,7 +33,7 @@ const CommandeTable: React.FC<CommandeTableProps> = ({ commandes }) => (
               Entité
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Initiateur
+              Pour utilisateur
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               Montant

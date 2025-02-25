@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 // Définission des données pour react 
 
@@ -28,7 +29,7 @@ interface Categorie {
 
 const Form: React.FC = () => {
   const [libelle, setLibelle] = useState('');
-  const [quantite, setQuantite] = useState(0);
+  const [quantite, setQuantite] = useState(1);
   const [montant, setMontant] = useState('');
   const [refFacture, setRefFacture] = useState('');
   const [commentaire, setCommentaire] = useState('');
@@ -44,6 +45,8 @@ const Form: React.FC = () => {
   const [utilisateurs, setUtilisateurs] = useState<Utilisateur[]>([]);
   const [categories, setCategories] = useState<Categorie[]>([]);
 
+  const router = useRouter(); 
+
   useEffect(() => {
     const fetchData = async () => {
       const fetchEntites = await fetch('/api/entites').then(res => res.json() as Promise<Entite[]>);
@@ -51,9 +54,12 @@ const Form: React.FC = () => {
       const fetchUtilisateurs = await fetch('/api/utilisateurs').then(res => res.json() as Promise<Utilisateur[]>);
       const fetchCategories = await fetch('/api/categories').then(res => res.json() as Promise<Categorie[]>);
 
+      // Trier les utilisateurs par ordre alphabétique des noms
+      const sortedUtilisateurs = fetchUtilisateurs.sort((a, b) => a.nom.localeCompare(b.nom));
+
       setEntites(fetchEntites);
       setFournisseurs(fetchFournisseurs);
-      setUtilisateurs(fetchUtilisateurs);
+      setUtilisateurs(sortedUtilisateurs);
       setCategories(fetchCategories);
     };
 
@@ -86,7 +92,7 @@ const Form: React.FC = () => {
       alert('Commande créée avec succès !');
       // Réinitialiser les champs du formulaire
       setLibelle('');
-      setQuantite(0);
+      setQuantite(1);
       setMontant('');
       setRefFacture('');
       setCommentaire('');
@@ -95,6 +101,9 @@ const Form: React.FC = () => {
       setInitiateurId(0);
       setUtilisateurId(0);
       setCategorieId(0);
+
+      // Rediriger vers la page d'accueil
+      router.push('/');
     } else {
       alert('Échec de la création de la commande.');
     }
@@ -137,13 +146,15 @@ const Form: React.FC = () => {
         </div>
         <div className="mb-4">
           <label htmlFor="montant" className="block text-gray-700">
-            Montant:
+            Montant (HT):
           </label>
           <input
-            type="text"
+            type="number"
             id="montant"
             value={montant}
             onChange={(e) => setMontant(e.target.value)}
+            pattern='\d*'
+            title="Veuillez entrer uniquement des chiffres."
             required
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           />
