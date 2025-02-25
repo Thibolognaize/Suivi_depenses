@@ -59,7 +59,7 @@ function splitFullName(fullName: string): { prenom: string; nom: string } {
   const parts = fullName.split(' ')
   return {
     prenom: parts[0],
-    nom: parts.slice(1).join(' ')
+    nom: parts.slice(1).join(' ').trim()
   }
 }
 // Nettoie le nom d'utilisateur en retirant les suffixes comme "(Partagée)"
