@@ -1,3 +1,4 @@
+// src/app/components/CommandeTable.tsx
 import React from 'react';
 
 interface Commande {
@@ -15,9 +16,10 @@ interface Commande {
 
 interface CommandeTableProps {
   commandes: Commande[];
+  onDelete: (id: number) => void;
 }
 
-const CommandeTable: React.FC<CommandeTableProps> = ({ commandes }) => (
+const CommandeTable: React.FC<CommandeTableProps> = ({ commandes, onDelete }) => (
   <div className="bg-white shadow-sm rounded-lg overflow-hidden">
     <div className="overflow-x-auto">
       <table className="min-w-full divide-y divide-gray-200">
@@ -40,6 +42,9 @@ const CommandeTable: React.FC<CommandeTableProps> = ({ commandes }) => (
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               État
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Actions
             </th>
           </tr>
         </thead>
@@ -71,6 +76,14 @@ const CommandeTable: React.FC<CommandeTableProps> = ({ commandes }) => (
                   'bg-gray-100 text-gray-800'}`}>
                   {commande.etat}
                 </span>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <button
+                  onClick={() => onDelete(commande.id)}
+                  className="text-red-600 hover:text-red-900"
+                >
+                  Supprimer
+                </button>
               </td>
             </tr>
           ))}
