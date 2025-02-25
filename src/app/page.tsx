@@ -94,6 +94,18 @@ export default function DepensesPage() {
 
     setFilteredCommandes(filtered);
   };
+  
+  const handleDelete = async (id: number) => {
+    try {
+      await fetch(`/api/commandes/delete/${id}`, {
+        method: 'DELETE',
+      });
+      setCommandes(commandes.filter((commande) => commande.id !== id));
+      setFilteredCommandes(filteredCommandes.filter((commande) => commande.id !== id));
+    } catch (error) {
+      console.error('Failed to delete commande:', error);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -106,6 +118,7 @@ export default function DepensesPage() {
     );
   }
 
+
   return (
     <div className="min-h-screen bg-gray-100 relative">
       <Header />
@@ -116,7 +129,7 @@ export default function DepensesPage() {
           entites={entites}
           onFilterDate={handleFilterDate}
         />
-        <CommandeTable commandes={filteredCommandes} />
+        <CommandeTable commandes={filteredCommandes} onDelete={handleDelete}/>
         <Button href="/insert-data" title='Ajouter une commande'></Button>
       </main>
     </div>
