@@ -29,7 +29,14 @@ export async function GET(_request: Request, { params }: { params: { id: string 
 // Modification de la commande
 export async function PUT(request: Request, { params }: { params: { id: string } }) {
     try {
-        const { libelle, quantite, montant, etat, entiteId, fournisseurId, categorieId, utilisateurId } = await request.json();
+        const data = await request.json();
+
+        // Validation des données
+        const { libelle, quantite, montant, etat, entiteId, fournisseurId, categorieId, utilisateurId } = data;
+
+        if (!libelle || !quantite || !montant || !etat || !entiteId || !fournisseurId || !categorieId || !utilisateurId) {
+            return NextResponse.json({ error: 'Tous les champs sont requis' }, { status: 400 });
+        }
 
         const commande = await prisma.commande.update({
             where: { id: Number(params.id) },

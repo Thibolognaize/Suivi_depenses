@@ -5,7 +5,6 @@
     - **Ajouter la possibilité d'ajouter des pièces jointes**
     - **Permettre a l'utilisateur de modifier une entrée** 
     - **Ajouter des boutons sur le formulaire d'insertion** : Permettre l'insertion de données dans toutes les tables de la base de données est crucial.
-    - **Validation des données** : Assurer que les données saisies sont valides et cohérentes. 
 
 2. **Moyenne Priorité**
     - **Interface utilisateur intuitive** : Améliorer l'interface globale, comme pour les filtres / la modification des elements ... 

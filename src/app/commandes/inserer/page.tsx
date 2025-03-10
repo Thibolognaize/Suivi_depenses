@@ -1,8 +1,8 @@
 // src/app/insert-data/page.tsx
 import React from 'react';
-import Form from '../components/Form';
+import Form from '../../components/AddForm';
 
-const InsertDataPage = () => {
+const InsertItem = () => {
   return (
     <div>
       <Form />
@@ -10,4 +10,4 @@ const InsertDataPage = () => {
   );
 };
 
-export default InsertDataPage;
+export default InsertItem;

@@ -130,7 +130,7 @@ export default function DepensesPage() {
           onFilterDate={handleFilterDate}
         />
         <CommandeTable commandes={filteredCommandes} onDelete={handleDelete}/>
-        <Button href="/insert-data" title='Ajouter une commande'></Button>
+        <Button href="/insert-item" title='Ajouter une commande'></Button>
       </main>
     </div>
   );
