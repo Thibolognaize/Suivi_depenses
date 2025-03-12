@@ -1,10 +1,5 @@
-// src/app/components/Form.tsx
-"use client";
-
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-
-// Définission des données pour react 
 
 interface Entite {
   id: number;
@@ -45,7 +40,7 @@ const Form: React.FC = () => {
   const [utilisateurs, setUtilisateurs] = useState<Utilisateur[]>([]);
   const [categories, setCategories] = useState<Categorie[]>([]);
 
-  const router = useRouter(); 
+  const router = useRouter();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,7 +49,6 @@ const Form: React.FC = () => {
       const fetchUtilisateurs = await fetch('/api/utilisateurs').then(res => res.json() as Promise<Utilisateur[]>);
       const fetchCategories = await fetch('/api/categories').then(res => res.json() as Promise<Categorie[]>);
 
-      // Trier les utilisateurs par ordre alphabétique des noms
       const sortedUtilisateurs = fetchUtilisateurs.sort((a, b) => a.nom.localeCompare(b.nom));
 
       setEntites(fetchEntites);
@@ -105,7 +99,9 @@ const Form: React.FC = () => {
       // Rediriger vers la page d'accueil
       router.push('/');
     } else {
-      alert('Échec de la création de la commande.');
+      // Lire le corps de la réponse pour obtenir plus de détails sur l'erreur
+      const errorData = await response.json();
+      alert(`Échec de la création de la commande:\n${errorData.error}`);
     }
   };
 
