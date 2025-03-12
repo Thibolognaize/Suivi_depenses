@@ -87,7 +87,7 @@ const CommandeTable: React.FC<CommandeTableProps> = ({ commandes, onDelete }) =>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className='flex space-x-2'>
-                    <Link href={`/modify-item/${commande.id}`}>
+                    <Link href={`/edit-commande?id=${commande.id}`}>
                       <img src="/icons/pencil.svg" alt="Editer" className='h-5 w-5 cursor-pointer'/>
                     </Link>
                     <button onClick={() => handleDelete(commande.id)}>
