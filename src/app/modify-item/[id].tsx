@@ -15,7 +15,7 @@ interface Commande {
   utilisateurId: number;
 }
 
-const ModifierCommande = ({ params }: { params: { id: string } }) => {
+const ModifyItem = ({ params }: { params: { id: string } }) => {
   const router = useRouter();
   const [commande, setCommande] = useState<Commande | null>(null);
   const [formData, setFormData] = useState<Commande>({
@@ -33,12 +33,13 @@ const ModifierCommande = ({ params }: { params: { id: string } }) => {
   useEffect(() => {
     const fetchCommande = async () => {
       try {
-        const response = await fetch(`/api/commandes/${params.id}`);
+        const response = await fetch(`/api/commandes/${params.id}`);       
         const data = await response.json();
         setCommande(data);
         setFormData(data);
       } catch (error) {
         console.error('Erreur lors de la récupération de la commande:', error);
+        
       }
     };
 
@@ -121,4 +122,4 @@ const ModifierCommande = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default ModifierCommande;
+export default ModifyItem;

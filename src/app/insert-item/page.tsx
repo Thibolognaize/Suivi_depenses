@@ -1,6 +1,6 @@
 // src/app/insert-data/page.tsx
 import React from 'react';
-import Form from '../../components/AddForm';
+import Form from '@/app/components/AddForm';
 
 const InsertItem = () => {
   return (
