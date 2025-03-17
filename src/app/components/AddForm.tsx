@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
+// Définir l'enum pour les états de la commande
+enum CommandeEtat {
+  RECU = 'recu',
+  COMMANDE = 'commande',
+  EXPEDIE = 'expedie',
+  RETOURNE = 'retourne'
+}
+
 interface Entite {
   id: number;
   nom: string;
@@ -22,12 +30,13 @@ interface Categorie {
   nom: string;
 }
 
-const Form: React.FC = () => {
+const AddForm: React.FC = () => {
   const [libelle, setLibelle] = useState('');
   const [quantite, setQuantite] = useState(1);
   const [montant, setMontant] = useState('');
   const [refFacture, setRefFacture] = useState('');
   const [commentaire, setCommentaire] = useState('');
+  const [etat, setEtat] = useState<CommandeEtat>(CommandeEtat.COMMANDE);
 
   const [entiteId, setEntiteId] = useState(0);
   const [fournisseurId, setFournisseurId] = useState(0);
@@ -74,11 +83,12 @@ const Form: React.FC = () => {
         montant: parseFloat(montant),
         ref_facture: refFacture,
         commentaire,
+        etat,
         entiteId,
         fournisseurId,
         initiateurId,
         utilisateurId,
-        categorieId,
+        categorieId
       }),
     });
 
@@ -90,6 +100,7 @@ const Form: React.FC = () => {
       setMontant('');
       setRefFacture('');
       setCommentaire('');
+      setEtat(CommandeEtat.COMMANDE);
       setEntiteId(0);
       setFournisseurId(0);
       setInitiateurId(0);
@@ -99,7 +110,6 @@ const Form: React.FC = () => {
       // Rediriger vers la page d'accueil
       router.push('/');
     } else {
-      // Lire le corps de la réponse pour obtenir plus de détails sur l'erreur
       const errorData = await response.json();
       alert(`Échec de la création de la commande:\n${errorData.error}`);
     }
@@ -178,6 +188,24 @@ const Form: React.FC = () => {
             onChange={(e) => setCommentaire(e.target.value)}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="etat" className="block text-gray-700">
+            État:
+          </label>
+          <select
+            id="etat"
+            value={etat}
+            onChange={(e) => setEtat(e.target.value as CommandeEtat)}
+            required
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          >
+            {Object.values(CommandeEtat).map((etat) => (
+              <option key={etat} value={etat}>
+                {etat.charAt(0).toUpperCase() + etat.slice(1)}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="mb-4">
           <label htmlFor="entiteId" className="block text-gray-700">
@@ -285,4 +313,4 @@ const Form: React.FC = () => {
   );
 };
 
-export default Form;
+export default AddForm;
