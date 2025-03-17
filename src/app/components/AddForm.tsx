@@ -9,6 +9,14 @@ enum CommandeEtat {
   RETOURNE = 'retourne'
 }
 
+// Mapping pour l'affichage avec accents
+const etatDisplayMap: Record<CommandeEtat, string> = {
+  [CommandeEtat.RECU]: 'Reçu',
+  [CommandeEtat.COMMANDE]: 'Commandé',
+  [CommandeEtat.EXPEDIE]: 'Expédié',
+  [CommandeEtat.RETOURNE]: 'Retourné'
+};
+
 interface Entite {
   id: number;
   nom: string;
@@ -202,7 +210,7 @@ const AddForm: React.FC = () => {
           >
             {Object.values(CommandeEtat).map((etat) => (
               <option key={etat} value={etat}>
-                {etat.charAt(0).toUpperCase() + etat.slice(1)}
+                {etatDisplayMap[etat]}
               </option>
             ))}
           </select>
