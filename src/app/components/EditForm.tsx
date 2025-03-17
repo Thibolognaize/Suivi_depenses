@@ -11,6 +11,15 @@ enum CommandeEtat {
   RETOURNE = 'retourne'
 }
 
+// Mapping pour l'affichage avec accents
+const etatDisplayMap: Record<CommandeEtat, string> = {
+  [CommandeEtat.RECU]: 'Reçu',
+  [CommandeEtat.COMMANDE]: 'Commandé',
+  [CommandeEtat.EXPEDIE]: 'Expédié',
+  [CommandeEtat.RETOURNE]: 'Retourné'
+};
+
+
 interface Commande {
   id: number;
   libelle: string;
@@ -126,6 +135,9 @@ const EditCommande = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      // Affiche les données envoyées dans la console
+      console.log('Données envoyées:', JSON.stringify(formData));
+  
       const response = await fetch(`/api/commandes/${id}`, {
         method: 'PUT',
         headers: {
@@ -133,9 +145,12 @@ const EditCommande = () => {
         },
         body: JSON.stringify(formData),
       });
-
+  
+      console.log('Statut de la réponse:', response.status);
+      console.log('En-têtes de la réponse:', response.headers.get('Content-Type'));
+  
       if (response.ok) {
-        router.push('/commandes');
+        router.push('/');
       } else {
         const errorData = await response.json();
         console.error('Erreur lors de la mise à jour de la commande:', errorData);
@@ -144,6 +159,7 @@ const EditCommande = () => {
       console.error('Erreur lors de la mise à jour de la commande:', error);
     }
   };
+  
 
   if (loading) {
     return <div className="text-center text-gray-500 mt-10">Chargement...</div>;
@@ -202,7 +218,7 @@ const EditCommande = () => {
           >
             {Object.values(CommandeEtat).map((etat) => (
               <option key={etat} value={etat}>
-                {etat.charAt(0).toUpperCase() + etat.slice(1)}
+                {etatDisplayMap[etat]}
               </option>
             ))}
           </select>
