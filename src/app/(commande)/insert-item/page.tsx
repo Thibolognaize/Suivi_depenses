@@ -1,12 +1,12 @@
-// src/app/insert-itemgit /page.tsx
+// src/app/insert-item/page.tsx
 'use client';
 import React from 'react';
-import Form from '@/app/components/AddForm';
+import AddForm from '@/app/components/AddForm';
 
 const InsertItem = () => {
   return (
     <div>
-      <Form />
+      <AddForm />
     </div>
   );
 };
