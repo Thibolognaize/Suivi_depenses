@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const prisma = new PrismaClient();
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
     console.log('Fetching commande with id:', id);
@@ -25,21 +25,44 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   }
 }
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
     const data = await request.json();
 
-    // Convertir les champs nécessaires en nombres
+    // Converti les champs nécessaires en nombres
     data.montant = parseFloat(data.montant);
     data.fournisseurId = parseInt(data.fournisseurId);
+    data.quantite = parseInt(data.quantite);
+    data.entiteId = parseInt(data.entiteId);
+    data.utilisateurId = parseInt(data.utilisateurId);
+    data.categorieId = parseInt(data.categorieId);
+
+    // Vérifie que les champs nécessaires sont présents et valides
+    if (isNaN(data.montant) || isNaN(data.fournisseurId) || isNaN(data.quantite) ||
+        isNaN(data.entiteId) || isNaN(data.utilisateurId) || isNaN(data.categorieId)) {
+      return NextResponse.json({ error: 'Données invalides' }, { status: 400 });
+    }
 
     console.log('Updating commande with id:', id);
     console.log('Data received:', data);
 
     const updatedCommande = await prisma.commande.update({
       where: { id: parseInt(id) },
-      data,
+      data: {
+        libelle: data.libelle,
+        quantite: data.quantite,
+        montant: data.montant,
+        ref_facture: data.ref_facture,
+        commentaire: data.commentaire,
+        date_modification: new Date().toISOString(), // Mettre à jour la date de modification
+        entiteId: data.entiteId,
+        fournisseurId: data.fournisseurId,
+        initiateurId: data.initiateurId,
+        utilisateurId: data.utilisateurId,
+        categorieId: data.categorieId,
+        etat: data.etat,
+      },
     });
 
     console.log('Commande mise à jour:', updatedCommande);

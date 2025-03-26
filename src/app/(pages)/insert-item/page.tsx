@@ -2,11 +2,14 @@
 'use client';
 import React from 'react';
 import AddForm from '@/app/components/AddForm';
+import { Suspense } from "react";
 
 const InsertItem = () => {
   return (
     <div>
-      <AddForm />
+      <Suspense>
+        <AddForm />
+      </Suspense>
     </div>
   );
 };
