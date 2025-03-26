@@ -1,190 +1,99 @@
-🐳 Pense-bête Docker, Git et Gestion de Projet
 
-### 1. Reconstruction de l'image Docker
+# Projet Next.js avec Authentification Microsoft Entra ID
 
-#### Commandes :
+## Prérequis
 
-```bash
-# Arrêter les conteneurs existants
-docker-compose down
+- Node.js et npm installés sur votre machine.
+- Un compte Azure avec accès à Azure Active Directory.
+- Une base de données configurée (par exemple, Mysql).
 
-# Reconstruire l'image sans cache
-docker-compose build --no-cache
+## Étapes de mise en place
 
-# Redémarrer les conteneurs
-docker-compose up -d
-```
+### 1. Installer les dépendances
 
-#### Pourquoi reconstruire sans cache ?
-
-- Forcer le téléchargement des dernières dépendances
-- S'assurer que toutes les étapes sont réexécutées
-- Éviter les problèmes de cache potentiels
-
-### 2. Workflow Git et GitHub
-
-#### Étapes de mise à jour du projet
-
-1. **Avant de commencer**
+Clonez le dépôt et installez les dépendances nécessaires :
 
 ```bash
-# Vérifier la branche courante
-git status
-
-# Mettre à jour la branche principale
-git checkout main
-git pull origin main
+git clone <votre-repo>
+cd <votre-projet>
+npm install
 ```
 
-2. **Créer une nouvelle branche de développement**
+### 1.5 Enregistrer l'application dans Microsoft Entra ID
+
+1. **Accédez au portail Azure** : Connectez-vous au [portail Azure](https://portal.azure.com/).
+2. **Enregistrez une nouvelle application** :
+   - Allez dans "Azure Active Directory" > "App registrations" > "New registration".
+   - Donnez un nom à votre application et configurez l'URL de redirection (par exemple, `http://localhost:3000/api/auth/callback/azure-ad`).
+3. **Notez les informations suivantes** :
+   - **Client ID** : Identifiant de l'application.
+   - **Tenant ID** : Identifiant du locataire.
+   - **Client Secret** : Générez un secret client dans "Certificates & secrets".
+
+### 2. Configurer les variables d'environnement
+
+Créez un fichier `.env.local` à la racine de votre projet et renseignez les informations suivantes :
+
+```env
+AZURE_AD_CLIENT_ID=votre-client-id
+AZURE_AD_CLIENT_SECRET=votre-client-secret
+AZURE_AD_TENANT_ID=votre-tenant-id
+AUTH_SECRET=votre-secret-auth
+DATABASE_URL=votre-url-de-connexion-bdd
+```
+
+### 3. Mettre en place le schéma Prisma pour la base de données
+
+1. **Installer Prisma** :
+
+   ```bash
+   npm install @prisma/client
+   npm install prisma --save-dev
+   ```
+2. **Initialiser Prisma** :
+
+   ```bash
+   npx prisma init
+   ```
+3. **Configurer le schéma Prisma** :
+
+   Éditez le fichier `prisma/schema.prisma` pour définir votre modèle de données. Exemple :
+
+   ```prisma
+   datasource db {
+     provider = "postgresql"
+     url      = env("DATABASE_URL")
+   }
+
+   generator client {
+     provider = "prisma-client-js"
+   }
+
+   model User {
+     id    Int     @id @default(autoincrement())
+     name  String
+     email String  @unique
+   }
+   ```
+4. **Migrer la base de données** :
+
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+
+### 3.5 Insérer un jeu de données (optionnel)
+
+Si vous avez besoin d'insérer des données initiales, utilisez le script définit (import-data) ou un outil comme `prisma db seed` :
 
 ```bash
-git checkout -b feature/ma-nouvelle-fonctionnalite
+npm import-data
+npx prisma db seed
 ```
 
-3. **Développer et tester localement**
+### 4. Lancer le projet en mode développement
 
-- Faire vos modifications
-- Tester avec Docker
-- Vérifier que tout fonctionne
-
-4. **Commit et push**
+Démarrez le serveur de développement Next.js :
 
 ```bash
-# Ajouter les fichiers modifiés
-git add .
-
-# Commiter avec un message clair
-git commit -m "Description précise des modifications"
-
-# Pousser la branche sur GitHub
-git push -u origin feature/ma-nouvelle-fonctionnalite
+npm run dev
 ```
-
-5. **Créer une Pull Request sur GitHub**
-
-- Comparer avec la branche `main`
-- Ajouter une description détaillée
-- Demander une revue si nécessaire
-
-### 3. Configuration `.gitignore`
-
-#### À GARDER :
-
-```gitignore
-# Dépendances
-node_modules/
-.pnp/
-.pnp.js
-
-# Fichiers de build
-/build
-/.next/
-/out/
-
-# Environnement
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDE et éditeurs
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Système
-.DS_Store
-Thumbs.db
-
-# Prisma
-/prisma/migrations/
-```
-
-#### À NE PAS GARDER :
-
-- Fichiers de configuration personnelle
-- Secrets
-- Données locales de test
-- Fichiers générés dynamiquement
-
-### 4. Bonnes pratiques GitHub
-
-#### Gestion de projet
-
-- Utiliser les **issues** pour tracker les tâches
-- Créer des **projets** pour organiser le développement
-- Utiliser des **milestones** pour les versions
-
-#### Protection de la branche `main`
-
-- Activer les règles de protection
-- Nécessiter des revues de code
-- Vérifier les tests avant fusion
-
-### 5. Documentation
-
-#### Fichiers à ajouter à la racine
-
-- `README.md` : Description du projet
-- `CONTRIBUTING.md` : Guide pour les contributeurs
-- `LICENSE` : Licence du projet
-
-### 6. Sécurité
-
-#### Variables d'environnement
-
-- Utiliser GitHub Secrets pour les variables sensibles
-- Ne JAMAIS commiter de clés privées
-
-### Commandes utiles Git
-
-```bash
-# Vérifier l'état
-git status
-
-# Voir les différences
-git diff
-
-# Historique des commits
-git log
-
-# Revenir à un commit précédent
-git reset --hard <commit-hash>
-```
-
-### Mise à jour 25/03/25
-
-1. **Configuration de l'environnement Azure AD** :
-
-   - enregistrement de l'application dns le portail Azure AD pour obtenir l'ID d'application (Client ID), le secret client (Client Secret), et l'ID du locataire (Tenant ID).
-   - configuration des URLs de redirection nécessaires pour que mon application puisse gérer les réponses d'authentification.
-2. **Installation et configuration de NextAuth.js** :
-
-   - Installation de NextAuth.js dans mon projet pour gérer l'authentification.
-   - Création du fichier `authOptions.ts` pour configurer les options d'authentification, y compris le fournisseur Azure AD et les callbacks pour gérer les tokens JWT et les sessions.
-3. **Mise en place de la page de connexion** :
-
-   - Création du composant de connexion qui utilise `signIn` de NextAuth.js pour initier le processus d'authentification avec Microsoft.
-   - Ajout d'une logique pour rediriger automatiquement l'utilisateur vers la page principale après une connexion réussie.
-4. **Protection des routes avec `ProtectedRoute`** :
-
-   - Création d'un composant pour protéger les routes, en vérifiant l'état de la session et en redirigeant les utilisateurs non authentifiés vers la page de connexion.
-   - Utilisation du hook `useSession` de NextAuth.js pour vérifier l'état de la session dans le composant `ProtectedRoute`.
-5. **Intégration du `SessionProvider`** :
-
-   - Création d'un wrapper de session pour fournir le contexte de session à toute l'application, en utilisant `SessionProvider` de NextAuth.js.
-6. **Gestion des variables d'environnement** :
-
-   - Config des variables d'environnement nécessaires dans le fichier `.env.local` pour stocker les identifiants Azure AD et les secrets de manière sécurisée.
-7. **Débogage et vérification** :
-
-   - Ajout des logs pour vérifier l'état de la session et diagnostiquer les problèmes de redirection.
-   - Vérification que toutes les configurations étaient correctes et que l'application fonctionnait comme prévu après la connexion.
