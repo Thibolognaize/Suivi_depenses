@@ -4,6 +4,7 @@ import Header from '@/app/components/Header1';
 import Filters from '@/app/components/Filters';
 import CommandeTable from '@/app/components/CommandeTable';
 import Button from './components/ButtonAdd';
+import ProtectedRoute from '@/lib/ProtectedRoute';
 
 interface Commande {
   id: number;
@@ -120,18 +121,20 @@ export default function DepensesPage() {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 relative">
-      <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <Filters
-          onSort={handleSort}
-          onFilterEntite={handleFilterEntite}
-          entites={entites}
-          onFilterDate={handleFilterDate}
-        />
-        <CommandeTable commandes={filteredCommandes} onDelete={handleDelete}/>
-        <Button href="/insert-item" title='Ajouter une commande'></Button>
-      </main>
-    </div>
+    <ProtectedRoute>
+      <div className="min-h-screen bg-gray-100 relative">
+        <Header />
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <Filters
+            onSort={handleSort}
+            onFilterEntite={handleFilterEntite}
+            entites={entites}
+            onFilterDate={handleFilterDate}
+          />
+          <CommandeTable commandes={filteredCommandes} onDelete={handleDelete}/>
+          <Button href="/insert-item" title='Ajouter une commande'></Button>
+        </main>
+      </div>
+    </ProtectedRoute>
   );
 }
