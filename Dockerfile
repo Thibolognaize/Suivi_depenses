@@ -1,52 +1,29 @@
-# Image de base
-FROM node:23.10.0 AS base
+# Utiliser une image de base officielle de Node.js
+FROM node:23-alpine
 
-# Étape de dépendances
-FROM base AS deps
+# Définir le répertoire de travail
 WORKDIR /app
 
-# Copier les fichiers de dépendances
-COPY package.json package-lock.json ./
+# Copier package.json et package-lock.json
+COPY package*.json ./
 
 # Installer les dépendances
-RUN npm ci
+RUN npm install
 
-# Étape de construction
-FROM base AS builder
-WORKDIR /app
-
-# Copier les dépendances et le code source
-COPY --from=deps /app/node_modules ./node_modules
+# Copier le reste des fichiers de l'application
 COPY . .
 
-# Construire l'application
+# Installer les dépendances de développement et générer Prisma Client
+RUN npm install -D ts-node typescript
+
+# Générer le client Prisma
+RUN npx prisma generate
+
+# Construire l'application Next.js
 RUN npm run build
 
-# Image de production
-FROM node:23.10.0 AS runner
-WORKDIR /app
-
-# Configuration de l'environnement
-ENV NODE_ENV=production
-ENV PORT=3000
-
-# Créer un utilisateur non-root
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs
-
-# Copier les fichiers nécessaires
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-# Configurer les permissions
-RUN mkdir -p .next && chown nextjs:nodejs .next
-
-# Changer d'utilisateur
-USER nextjs
-
-# Exposer le port
+# Exposer le port sur lequel l'application va tourner
 EXPOSE 3000
 
-# Commande de démarrage
-CMD ["node", "server.js"]
+# Commande pour démarrer l'application
+CMD ["sh", "-c", "npx prisma migrate deploy && npx prisma db pull && npm run import-data && npm start"]
