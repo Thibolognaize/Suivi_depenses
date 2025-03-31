@@ -1,37 +1,37 @@
 import { PrismaClient } from '@prisma/client'
 import * as fs from 'fs'
-import * as readline from 'readline'
+// import * as readline from 'readline'
 
 const prisma = new PrismaClient()
 
 // Fonction pour obtenir une réponse Y/N de l'utilisateur
-function askForConfirmation(question: string): Promise<boolean> {
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
-    })
+// function askForConfirmation(question: string): Promise<boolean> {
+//     const rl = readline.createInterface({
+//       input: process.stdin,
+//       output: process.stdout
+//     })
   
-    return new Promise((resolve) => {
-      rl.question(`${question} (Y/N): `, (answer) => {
-        rl.close()
-        resolve(answer.toLowerCase() === 'y')
-      })
-    })
-}
+//     return new Promise((resolve) => {
+//       rl.question(`${question} (Y/N): `, (answer) => {
+//         rl.close()
+//         resolve(answer.toLowerCase() === 'y')
+//       })
+//     })
+// }
 
 // Fonction de nettoyage de la base
 async function cleanDatabase() {
     console.log('Nettoyage de la base de données...')
     try {
-            // Demande de confirmation avec message d'avertissement
-        const isConfirmed = await askForConfirmation(
-            "\n⚠️  Attention: Cette action va supprimer toutes les données de la base. Continuer?")
-            // Si l'utilisateur n'a pas confirmé, on arrête
-            if (!isConfirmed) {
-            console.log('❌ Opération annulée')
-            return false
-            }
-
+    //         // Demande de confirmation avec message d'avertissement
+    //     const isConfirmed = await askForConfirmation(
+    //         "\n⚠️  Attention: Cette action va supprimer toutes les données de la base. Continuer?")
+    //         // Si l'utilisateur n'a pas confirmé, on arrête
+    //         if (!isConfirmed) {
+    //         console.log('❌ Opération annulée')
+    //         return false
+    //         }
+      
         await prisma.validation.deleteMany({})
         await prisma.commande.deleteMany({})
         await prisma.user.deleteMany({})
