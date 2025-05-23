@@ -121,7 +121,7 @@ export default function DepensesPage() {
 
 
   return (
-    <ProtectedRoute>
+    // <ProtectedRoute>
       <div className="min-h-screen bg-gray-100 relative">
         <Header />
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -135,6 +135,6 @@ export default function DepensesPage() {
           <Button href="/insert-item" title='Ajouter une commande'></Button>
         </main>
       </div>
-    </ProtectedRoute>
+    // </ProtectedRoute>
   );
 }

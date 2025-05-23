@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import CommandeEtat from './CommandeEtat';
-import Image from 'next/image';
 
 interface Commande {
   id: number;
@@ -85,22 +85,10 @@ const CommandeTable: React.FC<CommandeTableProps> = ({ commandes, onDelete }) =>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className='flex space-x-2'>
                     <Link href={`/edit-commande?id=${commande.id}`}>
-                      <Image
-                        src="/icons/pencil.svg"
-                        alt="Editer"
-                        className='cursor-pointer'
-                        width={20} 
-                        height={20} 
-                      />
+                      <Image src="/icons/pencil.svg" alt="Editer" width={20} height={20} className='h-5 w-5 cursor-pointer'/>
                     </Link>
                     <button onClick={() => handleDelete(commande.id)}>
-                      <Image 
-                        src={"/icons/trash.svg"}
-                        alt='Supprimer'
-                        className='cursor-pointer'
-                        width={20}
-                        height={20}
-                      />
+                      <Image src='/icons/trash.svg' alt='Supprimer' width={20} height={20} className="h-5 w-5" />
                     </button>
                   </span>
                 </td>
