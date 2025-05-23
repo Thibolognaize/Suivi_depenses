@@ -1,29 +1,70 @@
-# Utiliser une image de base officielle de Node.js
-FROM node:23-alpine
+# Image de base
+FROM node:18-alpine AS base
+RUN apk add --no-cache libc6-compat
 
-# Définir le répertoire de travail
+# Étape de dépendances
+FROM base AS deps
 WORKDIR /app
 
-# Copier package.json et package-lock.json
-COPY package*.json ./
+# Copier les fichiers de dépendances
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 
-# Installer les dépendances
-RUN npm install
+# Installer les dépendances selon le gestionnaire de packages
+RUN \
+  if [ -f package-lock.json ]; then npm ci; \
+  elif [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
-# Copier le reste des fichiers de l'application
+# Étape de construction
+FROM base AS builder
+WORKDIR /app
+
+# Copier les dépendances et le code source
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Installer les dépendances de développement et générer Prisma Client
-RUN npm install -D ts-node typescript
+RUN npm install -D ts-node typescript \
+    && npx prisma generate      
 
-# Générer le client Prisma
-RUN npx prisma generate
+# Construire l'application
+RUN \
+  if [ -f package-lock.json ]; then npm run build; \
+  elif [ -f yarn.lock ]; then yarn run build; \
+  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
-# Construire l'application Next.js
-RUN npm run build
+# Image de production
+FROM base AS runner
+WORKDIR /app
 
-# Exposer le port sur lequel l'application va tourner
-EXPOSE 3000
+# Configuration de l'environnement
+ENV NODE_ENV=production
+ENV PORT=3333
+ENV HOSTNAME=0.0.0.0
 
-# Commande pour démarrer l'application
-CMD ["sh", "-c", "npx prisma migrate deploy && npx prisma db pull && npm run import-data && npm start"]
+# Créer un utilisateur non-root
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copier les fichiers nécessaires
+COPY --from=builder /app/public ./public
+COPY prisma ./prisma
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Configurer les permissions
+RUN mkdir -p .next  # Utilisez mkdir -p pour éviter les erreurs si le répertoire existe déjà
+RUN chown nextjs:nodejs .next
+
+# Changer d'utilisateur
+USER nextjs
+
+# Exposer le port
+EXPOSE 3333
+
+# Commande de démarrage
+CMD ["node", "server.js"]
