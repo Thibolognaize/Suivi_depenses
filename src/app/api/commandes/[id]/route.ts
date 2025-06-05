@@ -30,6 +30,9 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     // Convertir les champs nécessaires en nombres
     data.montant = parseFloat(data.montant);
     data.fournisseurId = parseInt(data.fournisseurId);
+    data.utilisateurId = parseInt(data.utilisateurId);
+    data.entiteId = parseInt(data.entiteId);
+    data.categorieId = parseInt(data.categorieId);
 
     const updatedCommande = await prisma.commande.update({
       where: { id: parseInt(id) },
