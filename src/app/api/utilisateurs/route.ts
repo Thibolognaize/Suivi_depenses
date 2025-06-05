@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function GET() {
   try {
-    const utilisateurs = await prisma.user.findMany();
+    const utilisateurs = await prisma.collaborateur.findMany();
     return NextResponse.json(utilisateurs);
   } catch (error) {
     console.error('Erreur lors de la récupération des utilisateurs:', error);

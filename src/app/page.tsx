@@ -16,7 +16,7 @@ interface Commande {
   entite: { nom: string };
   fournisseur: { nom: string };
   categorie: { nom: string };
-  user_commande_utilisateurIdToUser: { nom: string; prenom: string };
+  utilisateur: { nom: string; prenom: string };
 }
 
 export default function DepensesPage() {
@@ -37,10 +37,16 @@ export default function DepensesPage() {
           throw new Error('Data is not an array');
         }
 
-        setCommandes(data);
-        setFilteredCommandes(data);
+        // Map utilisateur de commande à utilisateur
+        const mappedData = data.map((c: Commande) => ({
+          ...c,
+          utilisateur: c.utilisateur,
+        }));
 
-        const uniqueEntites = Array.from(new Set(data.map((c: Commande) => c.entite.nom)));
+        setCommandes(mappedData);
+        setFilteredCommandes(mappedData);
+
+        const uniqueEntites = Array.from(new Set(mappedData.map((c: Commande) => c.entite.nom)));
         setEntites(uniqueEntites as string[]);
       } catch (error) {
         console.error('Erreur lors du chargement des données:', error);

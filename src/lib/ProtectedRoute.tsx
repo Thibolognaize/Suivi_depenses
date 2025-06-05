@@ -13,9 +13,6 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const { data: session, status } = useSession();
 
   useEffect(() => {
-    console.log('Session status:', status);
-    console.log('Session data:', session);
-
     if (status === 'loading') return; // Do nothing while loading
     if(session) router.push('/')
     if (!session) router.push('/login');

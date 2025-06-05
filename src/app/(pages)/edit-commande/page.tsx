@@ -1,12 +1,11 @@
-"use client";
+// src/app/edit-commande/page.tsx
+import { Suspense } from 'react';
+import EditCommande from '@/app/components/EditCommande';
 
-import React from "react";
-import EditForm from "@/app/components/EditForm";
-
-const EditItem = () => {
-  return <div>
-    <EditForm />
-  </div>;
-};
-
-export default EditItem;
+export default function EditCommandePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <EditCommande />
+    </Suspense>
+  );
+}

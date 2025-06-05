@@ -113,7 +113,7 @@ async function importData() {
 
         const { prenom, nom } = splitFullName(userData.nom)
         
-        const user = await prisma.user.create({
+        const user = await prisma.collaborateur.create({
           data: {
             prenom,
             nom,
@@ -160,15 +160,15 @@ async function importData() {
 
         // Recherche des utilisateurs avec le mapping
         const initiateur = userMap.get(cleanUserName(cmdData.initiateur))
-        const utilisateur = userMap.get(cleanUserName(cmdData.utilisateur))
+        const collaborateur = userMap.get(cleanUserName(cmdData.utilisateur))
 
-        if (!initiateur || !utilisateur) {
+        if (!initiateur || !collaborateur) {
           console.error(`⚠️ Utilisateurs non trouvés pour la commande ${cmdData.libelle}:`)
           if (!initiateur) {
             console.error(`  - Initiateur: ${cmdData.initiateur}`)
           }
-          if (!utilisateur) {
-            console.error(`  - Utilisateur: ${cmdData.utilisateur}`)
+          if (!collaborateur) {
+            console.error(`  - Utilisateur: ${cmdData.collaborateur}`)
           }
           continue
         }
@@ -186,7 +186,7 @@ async function importData() {
             fournisseurId: fournisseur.id,
             categorieId: categorie.id,
             initiateurId: initiateur.id,
-            utilisateurId: utilisateur.id,
+            utilisateurId: collaborateur.id,
             etat: cmdData.etat,
             validation: cmdData.validation ? {
               create: {

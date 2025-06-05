@@ -31,3 +31,6 @@ Thumbs.db
 # Données confidentielles
 /src/data/data.json
 docs/IDEAS.md
+prisma/migrations/
+prisma/sauvegarde.sql
+prisma/migrations/migration_lock.toml
