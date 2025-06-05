@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import CommandeEtat from './CommandeEtat';
+import Image from 'next/image';
 
 interface Commande {
   id: number;
@@ -12,7 +13,7 @@ interface Commande {
   entite: { nom: string };
   fournisseur: { nom: string };
   categorie: { nom: string };
-  user_commande_utilisateurIdToUser: { nom: string; prenom: string };
+  utilisateur: { nom: string; prenom: string };
 }
 
 interface CommandeTableProps {
@@ -70,7 +71,7 @@ const CommandeTable: React.FC<CommandeTableProps> = ({ commandes, onDelete }) =>
                   {commande.entite.nom}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {`${commande.user_commande_utilisateurIdToUser.prenom} ${commande.user_commande_utilisateurIdToUser.nom}`}
+                  {`${commande.utilisateur.prenom} ${commande.utilisateur.nom}`}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {new Intl.NumberFormat('fr-FR', {
@@ -84,10 +85,10 @@ const CommandeTable: React.FC<CommandeTableProps> = ({ commandes, onDelete }) =>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className='flex space-x-2'>
                     <Link href={`/edit-commande?id=${commande.id}`}>
-                      <img src="/icons/pencil.svg" alt="Editer" className='h-5 w-5 cursor-pointer'/>
+                      <Image src="/icons/pencil.svg" alt="Editer" width={20} height={20} className='cursor-pointer'/>
                     </Link>
                     <button onClick={() => handleDelete(commande.id)}>
-                      <img src='/icons/trash.svg' alt='Supprimer' className="h-5 w-5" />
+                      <Image src="/icons/trash.svg" alt="Supprimer" width={20} height={20} />
                     </button>
                   </span>
                 </td>

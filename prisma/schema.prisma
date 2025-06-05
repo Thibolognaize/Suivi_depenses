@@ -1,132 +1,180 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL_DEV")
+}
+
 generator client {
-  provider      = "prisma-client-js"
+  provider = "prisma-client-js"
   binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
 }
 
-datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+// Modèles pour NextAuth
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String  @map("user_id")
+  type               String
+  provider           String
+  providerAccountId  String  @map("provider_account_id")
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
+  expires_at         Int?
+  ext_expires_in     Int?
+  token_type         String?
+  scope              String?
+  id_token           String? @db.Text
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("account")
 }
 
-// Table des catégories de matériel
-model categorie {
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("session")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime? @map("email_verified")
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+
+  @@map("user")
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_token")
+}
+
+// Modèles pour l'application
+model Categorie {
   id       Int        @id @default(autoincrement())
   nom      String     @unique(map: "Categorie_nom_key")
-  // Relation avec les commandes : une catégorie peut avoir plusieurs commandes
-  commande commande[]
+  commande Commande[]
+
+  @@map("categorie")
 }
 
-// Table des entités (bureaux)
-model entite {
+model Entite {
   id       Int        @id @default(autoincrement())
   nom      String     @unique(map: "Entite_nom_key")
-  // Relations : une entité peut avoir plusieurs commandes et utilisateurs
-  commande commande[]
-  user     user[]
+  commande Commande[]
+  collaborateur     Collaborateur[]
+
+  @@map("entite")
 }
 
-// Table des fournisseurs
-model fournisseur {
+model Fournisseur {
   id       Int        @id @default(autoincrement())
   nom      String     @unique(map: "Fournisseur_nom_key")
-  // Relation : un fournisseur peut avoir plusieurs commandes
-  commande commande[]
+  commande Commande[]
+
+  @@map("fournisseur")
 }
 
-// Table des utilisateurs
-model user {
+model Collaborateur {
   id                 Int         @id @default(autoincrement())
   nom                String
   prenom             String
-  email              String       @unique
-  role               user_role    @default(utilisateur)
+  email              String     @unique
+  role               CollabRole    @default(utilisateur)
   entiteId           Int
   isActive           Boolean      @default(true)
   date_creation      DateTime     @default(now())
   derniere_connexion DateTime?
 
-  // Relations avec les commandes et l'entité
-  commandes_initiees   commande[]   @relation("commande_initiateurIdTouser")
-  commandes_utilisees  commande[]   @relation("commande_utilisateurIdTouser")
-  entite              entite       @relation(fields: [entiteId], references: [id], onDelete: Cascade)
-  // Relation avec les validations
-  validations         validation[]
+  commandes_initiees   Commande[] @relation("CommandeInitiateur")
+  commandes_utilisees  Commande[] @relation("CommandeUtilisateur")
+  entite              Entite     @relation(fields: [entiteId], references: [id], onDelete: Cascade)
+  validations         Validation[]
 
-  @@index([entiteId], map: "User_entiteId_fkey")
+  @@index([entiteId], map: "Collaborateur_entiteId_fkey")
+
+  @@map("collaborateur")
 }
 
-// Table principale des commandes
-model commande {
+model Commande {
   id                Int           @id @default(autoincrement())
   libelle           String
-  quantite          Int
-  montant           Decimal       @db.Decimal(10, 2)
+  quantite           Int
+  montant            Decimal      @db.Decimal(10, 2)
   ref_facture       String?       @unique
   commentaire       String?
   date_creation     DateTime      @default(now())
-  date_modification DateTime      @default(now()) @updatedAt
-  
-  // Clés étrangères
+  date_modification  DateTime      @default(now()) @updatedAt
+
   entiteId          Int
   fournisseurId     Int
   initiateurId      Int
   utilisateurId     Int
   categorieId       Int
-  
-  // État de la commande
-  etat              commande_etat @default(commande)
 
-  // Relations avec contraintes de suppression en cascade
-  categorie    categorie   @relation(fields: [categorieId], references: [id], onDelete: Cascade)
-  entite       entite      @relation(fields: [entiteId], references: [id], onDelete: Cascade)
-  fournisseur  fournisseur @relation(fields: [fournisseurId], references: [id], onDelete: Cascade)
-  
-  // Relations avec les utilisateurs
-  user_commande_initiateurIdToUser    user  @relation("commande_initiateurIdTouser", fields: [initiateurId], references: [id], onDelete: Cascade)
-  user_commande_utilisateurIdToUser   user  @relation("commande_utilisateurIdTouser", fields: [utilisateurId], references: [id], onDelete: Cascade)
-  
-  // Relation avec la validation
-  validation   validation?
+  etat              CommandeEtat @default(commande)
 
-  // Index pour optimiser les recherches
+  categorie    Categorie @relation(fields: [categorieId], references: [id], onDelete: Cascade)
+  entite       Entite   @relation(fields: [entiteId], references: [id], onDelete: Cascade)
+  fournisseur  Fournisseur @relation(fields: [fournisseurId], references: [id], onDelete: Cascade)
+
+  initiateur   Collaborateur @relation("CommandeInitiateur", fields: [initiateurId], references: [id], onDelete: Cascade)
+  utilisateur Collaborateur @relation("CommandeUtilisateur", fields: [utilisateurId], references: [id], onDelete: Cascade)
+
+  validation   Validation?
+
   @@index([categorieId])
   @@index([entiteId])
   @@index([fournisseurId])
   @@index([initiateurId])
   @@index([utilisateurId])
+
+  @@map("commande")
 }
 
-// Table des validations de commandes
-model validation {
+model Validation {
   id              Int               @id @default(autoincrement())
   commandeId      Int               @unique
-  statut          validation_statut
+  statut          ValidationStatut
   date_validation DateTime
   validateur_id   Int
   commentaire     String?
 
-  // Relations avec contraintes de suppression en cascade
-  commande    commande    @relation(fields: [commandeId], references: [id], onDelete: Cascade)
-  validateur  user        @relation(fields: [validateur_id], references: [id], onDelete: Cascade)
+  commande    Commande @relation(fields: [commandeId], references: [id], onDelete: Cascade)
+  validateur  Collaborateur @relation(fields: [validateur_id], references: [id], onDelete: Cascade)
 
   @@index([validateur_id])
+
+  @@map("validation")
 }
 
 // Énumérations pour les différents statuts
-enum user_role {
+enum CollabRole {
   admin
   associe
   utilisateur
 }
 
-enum commande_etat {
+enum CommandeEtat {
   commande
   expedie
   recu
   retourne
 }
 
-enum validation_statut {
+enum ValidationStatut {
   en_attente
   approuve
   refuse

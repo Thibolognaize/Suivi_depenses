@@ -1,35 +1,31 @@
-// src/app/lib/authOptions.ts
-import { NextAuthOptions } from "next-auth";
-import AzureADProvider from "next-auth/providers/azure-ad";
-
-// Étendre l'interface Session pour inclure accessToken
-declare module "next-auth" {
-  interface Session {
-    accessToken?: string;
-  }
-}
+// lib/authOptions.ts
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { prisma } from './prisma';
+import AzureADProvider from 'next-auth/providers/azure-ad';
+import { NextAuthOptions } from 'next-auth';
 
 export const authOptions: NextAuthOptions = {
+  adapter: PrismaAdapter(prisma),
   providers: [
     AzureADProvider({
-      clientId: process.env.AZURE_AD_CLIENT_ID as string,
-      clientSecret: process.env.AZURE_AD_CLIENT_SECRET as string,
-      tenantId: process.env.AZURE_AD_TENANT_ID as string,
+      clientId: process.env.AZURE_AD_CLIENT_ID!,
+      clientSecret: process.env.AZURE_AD_CLIENT_SECRET!,
+      tenantId: process.env.AZURE_AD_TENANT_ID!,
     }),
   ],
-  secret: process.env.AUTH_SECRET,
   callbacks: {
-    async jwt({ token, account }) {
-      // Vérifiez que account et access_token sont définis et que access_token est une chaîne
-      if (account?.access_token) {
-        token.accessToken = account.access_token;
+    async session({ session, token }) {
+      if (token?.sub) {
+        session.user.id = token.sub;
+      }
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
       }
       return token;
     },
-    async session({ session, token }) {
-      // Send properties to the client, like an access_token from a provider.
-      session.accessToken = token.accessToken as string;
-      return session;
-    },
   },
+  secret: process.env.NEXTAUTH_SECRET,
 };

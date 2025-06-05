@@ -61,7 +61,7 @@ DATABASE_URL=votre-url-de-connexion-bdd
 
    ```prisma
    datasource db {
-     provider = "postgresql"
+     provider = "mysql"
      url      = env("DATABASE_URL")
    }
 

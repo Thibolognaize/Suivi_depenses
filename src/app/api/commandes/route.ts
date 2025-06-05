@@ -10,7 +10,7 @@ export async function GET() {
         entite: true,
         fournisseur: true,
         categorie: true,
-        user_commande_utilisateurIdToUser: true
+        utilisateur: true
       },
       orderBy: {
         date_creation: 'desc'

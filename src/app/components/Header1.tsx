@@ -10,7 +10,7 @@ const Header1 = () => (
             src={"/logo/logo-GLPI-250-black.png"}
             alt="Logo ECS" 
             width={128} 
-            height={128}
+            height={64}
             className="mr-4 object-contain"
           />
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">

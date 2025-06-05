@@ -136,8 +136,6 @@ const EditCommande = () => {
     e.preventDefault();
     try {
       // Affiche les données envoyées dans la console
-      console.log('Données envoyées:', JSON.stringify(formData));
-  
       const response = await fetch(`/api/commandes/${id}`, {
         method: 'PUT',
         headers: {
@@ -145,9 +143,6 @@ const EditCommande = () => {
         },
         body: JSON.stringify(formData),
       });
-  
-      console.log('Statut de la réponse:', response.status);
-      console.log('En-têtes de la réponse:', response.headers.get('Content-Type'));
   
       if (response.ok) {
         router.push('/');

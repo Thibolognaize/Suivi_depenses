@@ -14,7 +14,6 @@ const Login = () => {
 
   useEffect(() => {
     if (session) {
-      console.log(session);
       router.push('/'); // Redirige vers la page principale après la connexion
     }
   }, [session, router]);
