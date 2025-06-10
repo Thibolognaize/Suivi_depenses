@@ -1,0 +1,6 @@
+# Fichiers et dossiers à ignorer par Docker
+# Ignorer les fichiers de configuration de l'IDE
+.vscode
+
+# Fichier de doc
+docs

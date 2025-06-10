@@ -1,5 +1,5 @@
 // lib/authOptions.ts
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { PrismaAdapter } from '@auth/prisma-adapter';
 import { prisma } from './prisma';
 import AzureADProvider from 'next-auth/providers/azure-ad';
 import { NextAuthOptions } from 'next-auth';

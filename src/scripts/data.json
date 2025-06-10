@@ -1,0 +1,2848 @@
+{
+  "entite": [
+    {
+      "nom": "Agde"
+    },
+    {
+      "nom": "Audit"
+    },
+    {
+      "nom": "ECS"
+    },
+    {
+      "nom": "Bassin de thau"
+    },
+    {
+      "nom": "Pezenas"
+    },
+    {
+      "nom": "FBA"
+    },
+    {
+      "nom": "Loïs Holding"
+    },
+    {
+      "nom": "Mado"
+    },
+    {
+      "nom": "Montpellier"
+    },
+    {
+      "nom": "Patrimoine"
+    },
+    {
+      "nom": "Thau Secretariat"
+    },
+    {
+      "nom": "Sauvian"
+    }
+  ],
+  "fournisseur": [
+    {
+      "nom": "Denis"
+    },
+    {
+      "nom": "Amazon"
+    }
+  ],
+  "categorie": [
+    {
+      "nom": "Materiel informatique"
+    },
+    {
+      "nom": "Composants"
+    },
+    {
+      "nom": "Autres"
+    },
+    {
+      "nom": "Consommables"
+    },
+    {
+      "nom": "Accessoires"
+    },
+    {
+      "nom": "Accessoires audio"
+    }
+  ],
+  "utilisateur": [
+    {
+      "nom": "Antoine Ramon",
+      "email": "antoine.ramon@augefi.fr",
+      "role": "utilisateur",
+      "entite": "ECS",
+      "isActive": false
+    },
+    {
+      "nom": "Johann Affre",
+      "email": "johann.affre@augefi.fr",
+      "role": "associe",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Annie Madi",
+      "email": "annie.madi@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Arlette Villaret",
+      "email": "arlette.villaret@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Arnaud Sagner",
+      "email": "arnaud.sagner@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Sandrine Sartore",
+      "email": "sandrine.sartore@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Valentine Gasc",
+      "email": "valentine.gasc@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Benoît Blanc",
+      "email": "benoit.blanc@augefi.fr",
+      "role": "associe",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Christèle Gamito",
+      "email": "christele.gamito@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Clara Blancheteau",
+      "email": "clara.blancheteau@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Delphine Taputu guy",
+      "email": "delphine.taputuguy@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Enzo Ninfosi",
+      "email": "enzo.ninfosi@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Emilie Cavaillé",
+      "email": "emilie.cavaille@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Emilie Verniere",
+      "email": "emilie.verniere@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Jean-Christophe Barbut",
+      "email": "jcbarbut@augefi.fr",
+      "role": "associe",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Kari Vahvanen",
+      "email": "kari.vahvanen@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Kévin Ros",
+      "email": "kevin.ros@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Manon Poujol",
+      "email": "manon.poujol@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Mathieu Adli",
+      "email": "mathieu.adli@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Océane Challier",
+      "email": "oceane.challier@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Maëlle Poupin",
+      "email": "maelle.poupin@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Sonia Silva",
+      "email": "sonia.silva@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Tristan Renaud",
+      "email": "tristan.renaud@augefi.fr",
+      "role": "associe",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Nicolas Boutier",
+      "email": "nicolas.boutier@augefi.fr",
+      "role": "associe",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Guillaume Cocagnac",
+      "email": "guillaume.cocagnac@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": false
+    },
+    {
+      "nom": "Jean-Baptiste Lance",
+      "email": "jean-baptiste.lance@augefi.fr",
+      "role": "admin",
+      "entite": "ECS",
+      "isActive": true
+    },
+    {
+      "nom": "Thibault Feat",
+      "email": "thibault.feat@augefi.fr",
+      "role": "admin",
+      "entite": "ECS",
+      "isActive": true
+    },
+    {
+      "nom": "Lucy Girard",
+      "email": "lucy.girard@augefi.fr",
+      "role": "admin",
+      "entite": "ECS",
+      "isActive": true
+    },
+    {
+      "nom": "Laurent Bourles",
+      "email": "laurent.bourles@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Théo Pecherand",
+      "email": "theo.pecherand@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Agde",
+      "isActive": true
+    },
+    {
+      "nom": "Marion Cadars",
+      "email": "marion.cadars@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Audit",
+      "isActive": true
+    },
+    {
+      "nom": "Inès David",
+      "email": "ines.david@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Audit",
+      "isActive": true
+    },
+    {
+      "nom": "Valérie Picavet",
+      "email": "valerie.picavet@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Audit",
+      "isActive": true
+    },
+    {
+      "nom": "Caroline  Sarniguet",
+      "email": "caroline.sarniguet@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Audit",
+      "isActive": true
+    },
+    {
+      "nom": "Alice Salat",
+      "email": "alice.salat@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Amélie Bernard",
+      "email": "amelie.bernard@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Christophe Jaussan",
+      "email": "christophe.jaussan@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Francoise Moragues",
+      "email": "francoise.moragues@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Ermine Liguori",
+      "email": "ermine.liguori@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Lucas Gomez",
+      "email": "lucas.gomez@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Miléna Linguet",
+      "email": "milena.linguet@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Sébastien Giordano",
+      "email": "sebastien.giordano@augefi.fr",
+      "role": "utilisateur",
+      "entite": "FBA",
+      "isActive": true
+    },
+    {
+      "nom": "Stéphane Van Migom",
+      "email": "stephane.van.migom@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Thau Conseils",
+      "email": "thau.conseils@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Younes Bouhaddou",
+      "email": "younes.bouhaddou@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Cinderella Carpentier",
+      "email": "cinderella.carpentier.@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": false
+    },
+    {
+      "nom": "Sherley Jouge",
+      "email": "sherley.jouge@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Bassin de thau",
+      "isActive": true
+    },
+    {
+      "nom": "Marion Abadie Aoun",
+      "email": "marion.abadie.aoun@augefi.fr",
+      "role": "utilisateur",
+      "entite": "ECS",
+      "isActive": true
+    },
+    {
+      "nom": "Francois Alliès",
+      "email": "francois.allies@augefi.fr",
+      "role": "utilisateur",
+      "entite": "ECS",
+      "isActive": true
+    },
+    {
+      "nom": "Laure Michelon-Anastasy",
+      "email": "laure.michelonanastasy@augefi.fr",
+      "role": "utilisateur",
+      "entite": "ECS",
+      "isActive": true
+    },
+    {
+      "nom": "Nathalie Ferrere",
+      "email": "nathalie.ferrere@augefi.fr",
+      "role": "utilisateur",
+      "entite": "ECS",
+      "isActive": true
+    },
+    {
+      "nom": "Jennifer Goube",
+      "email": "jennifer.goube@augefi.fr",
+      "role": "utilisateur",
+      "entite": "FBA",
+      "isActive": true
+    },
+    {
+      "nom": "Florence Gatuingt",
+      "email": "florence.gatuingt@augefi.fr",
+      "role": "utilisateur",
+      "entite": "FBA",
+      "isActive": true
+    },
+    {
+      "nom": "Thomas Deljanin-Stojanović",
+      "email": "thomas.deljaninstojanovic@augefi.fr",
+      "role": "utilisateur",
+      "entite": "FBA",
+      "isActive": true
+    },
+    {
+      "nom": "Carla Martin",
+      "email": "carla.martin@augefi.fr",
+      "role": "utilisateur",
+      "entite": "FBA",
+      "isActive": true
+    },
+    {
+      "nom": "Clotilde Aubert",
+      "email": "clotilde.aubert@augefi.fr",
+      "role": "utilisateur",
+      "entite": "FBA",
+      "isActive": true
+    },
+    {
+      "nom": "Claire Molina",
+      "email": "claire.molina@augefi.fr",
+      "role": "utilisateur",
+      "entite": "FBA",
+      "isActive": true
+    },
+    {
+      "nom": "Jérôme Cavailles",
+      "email": "jerome.cavailles@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Loïs Holding",
+      "isActive": true
+    },
+    {
+      "nom": "Patrick Mado",
+      "email": "patrick.mado@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Mado",
+      "isActive": true
+    },
+    {
+      "nom": "Aurélie Copin",
+      "email": "aurelie.copin@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Mado",
+      "isActive": true
+    },
+    {
+      "nom": "Raphaël Vella",
+      "email": "raphael.vella@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Mado",
+      "isActive": true
+    },
+    {
+      "nom": "Isabelle Jaux",
+      "email": "isabelle.jaux@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Mado",
+      "isActive": true
+    },
+    {
+      "nom": "Laëtitia Cros",
+      "email": "laetitia.cros@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Mado",
+      "isActive": true
+    },
+    {
+      "nom": "Stéphanie Figueiredo",
+      "email": "stephanie.figueiredo.@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Mado",
+      "isActive": false
+    },
+    {
+      "nom": "Antoine Gout",
+      "email": "antoine.gout@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Montpellier",
+      "isActive": true
+    },
+    {
+      "nom": "Perrine Tailhan",
+      "email": "perrine.tailhan@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Montpellier",
+      "isActive": true
+    },
+    {
+      "nom": "Fanny Defossez",
+      "email": "fanny.defossez@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Montpellier",
+      "isActive": true
+    },
+    {
+      "nom": "Frederic Pierre",
+      "email": "frederic.pierre@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Montpellier",
+      "isActive": true
+    },
+    {
+      "nom": "Marina Becker",
+      "email": "marina.becker@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Montpellier",
+      "isActive": true
+    },
+    {
+      "nom": "Benjamin Saury",
+      "email": "benjamin.saury@augefi.fr",
+      "role": "utilisateur",
+      "entite": "Montpellier",
+      "isActive": true
+    }
+  ],
+  "commande": [
+    {
+      "libelle": "KitHDD+SSD SRV AGDE",
+      "quantite": 1,
+      "montant": 250,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Johann Affre",
+      "categorie": "Composants",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Chargeur Lenovo",
+      "quantite": 2,
+      "montant": 29,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Johann Affre",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:19:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Annie Madi",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Annie Madi",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Arlette Villaret",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Arnaud Sagner",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Arnaud Sagner",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Chargeur Lenovo",
+      "quantite": 1,
+      "montant": 25,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Sandrine Sartore",
+      "utilisateur": "Sandrine Sartore",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Scan Ads 4300",
+      "quantite": 1,
+      "montant": 300,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Sandrine Sartore",
+      "utilisateur": "Sandrine Sartore",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 500,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Valentine Gasc",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Benoît Blanc",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Christèle Gamito",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Clara Blancheteau",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Casque Sans-Fils",
+      "quantite": 1,
+      "montant": 160,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Delphine Taputu guy",
+      "categorie": "Accessoires audio",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 500,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Enzo Ninfosi (Partagée)",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Emilie Cavaillé",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Emilie Cavaillé",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Emilie Cavaillé",
+      "utilisateur": "Emilie Cavaillé",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Emilie Verniere",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Emilie Verniere",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clavier",
+      "quantite": 1,
+      "montant": 20.75,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Enzo Ninfosi (Partagée)",
+      "utilisateur": "Enzo Ninfosi (Partagée)",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Jean-Christophe Barbut",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Jean-Christophe Barbut",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Johann Affre",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Kari Vahvanen",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Kari Vahvanen",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Kévin Ros",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Kévin Ros",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clavier Souris",
+      "quantite": 1,
+      "montant": 20.75,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Manon Poujol",
+      "utilisateur": "Manon Poujol",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Manon Poujol",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Manon Poujol",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clavier Souris",
+      "quantite": 1,
+      "montant": 20.75,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Mathieu Adli",
+      "utilisateur": "Mathieu Adli",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Wide",
+      "quantite": 1,
+      "montant": 203,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Océane Challier",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 24,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Océane Challier",
+      "utilisateur": "Océane Challier",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Maëlle Poupin",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Sonia Silva",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 90.83,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Johann Affre",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:10:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC i7/Ryzen7",
+      "quantite": 1,
+      "montant": 750,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Tristan Renaud",
+      "utilisateur": "Tristan Renaud",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 19:05:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC i7/Ryzen7",
+      "quantite": 1,
+      "montant": 750,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Nicolas Boutier",
+      "utilisateur": "Nicolas Boutier",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 19:05:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC i5/Ryzen5",
+      "quantite": 1,
+      "montant": 600,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Guillaume Cocagnac (Partagée)",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 19:05:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Souris Ergonomique",
+      "quantite": 1,
+      "montant": 79,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:13:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Tableau blanc + micro Jabra + câble USB",
+      "quantite": 4,
+      "montant": 290.64,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-12-01 09:56:00",
+      "entite": "Agde",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 18:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clavier-souris",
+      "quantite": 1,
+      "montant": 90.54,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-15 10:01:00",
+      "entite": "Agde",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 18:56:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Chargeur PC Huawei",
+      "quantite": 2,
+      "montant": 50,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-19 08:25:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Tristan Renaud",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 11:59:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran LG 29",
+      "quantite": 2,
+      "montant": 189,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-29 16:17:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-05-03 11:29:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Scann de bureau",
+      "quantite": 1,
+      "montant": 250,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-02 17:02:00",
+      "entite": "Agde",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Laurent Bourles",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-02-19 08:52:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "HDMI",
+      "quantite": 6,
+      "montant": 5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-02 17:02:00",
+      "entite": "Agde",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Laurent Bourles",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-05-03 11:39:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Scann de bureau",
+      "quantite": 1,
+      "montant": 250,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-09-02 14:11:00",
+      "entite": "Agde",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Laurent Bourles",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-02-19 08:52:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "RAM",
+      "quantite": 1,
+      "montant": 50,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-03-21 09:30:00",
+      "entite": "Agde",
+      "fournisseur": "Denis",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Théo Pecherand",
+      "categorie": "Composants",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-13 08:27:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "UsbC/Ethernet",
+      "quantite": 7,
+      "montant": 133,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Marion Cadars",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Inès David",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "EarPods",
+      "quantite": 1,
+      "montant": 17,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Valérie Picavet",
+      "categorie": "Accessoires audio",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-03-14 13:28:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 500,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Valérie Picavet",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-03-14 13:28:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "EarPods",
+      "quantite": 1,
+      "montant": 15.83,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Marion Cadars",
+      "utilisateur": "Marion Cadars",
+      "categorie": "Accessoires audio",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Marion Cadars",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 500,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Tristan Renaud",
+      "utilisateur": "Marion Cadars",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Scann de bureau",
+      "quantite": 1,
+      "montant": 250,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-21 16:51:00",
+      "entite": "Audit",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Caroline  Sarniguet",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-12-03 18:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ordinateur Portable",
+      "quantite": 1,
+      "montant": 569,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-10-21 14:46:00",
+      "entite": "Audit",
+      "fournisseur": "Denis",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Marion Cadars",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-10-21 14:46:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "EarPods",
+      "quantite": 1,
+      "montant": 15.83,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Alice Salat",
+      "utilisateur": "Alice Salat",
+      "categorie": "Accessoires audio",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:15:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 99,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Amélie Bernard",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Amélie Bernard",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "EarPods",
+      "quantite": 1,
+      "montant": 15.83,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Christophe Jaussan",
+      "utilisateur": "Christophe Jaussan",
+      "categorie": "Accessoires audio",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 109,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Francoise Moragues",
+      "utilisateur": "Ermine Liguori",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Francoise Moragues",
+      "utilisateur": "Francoise Moragues",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Adaptateur HDMI VGA",
+      "quantite": 1,
+      "montant": 7.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Lucas Gomez",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24",
+      "quantite": 2,
+      "montant": 248.34,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Lucas Gomez",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Lucas Gomez",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 109,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Miléna Linguet",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Portable",
+      "quantite": 1,
+      "montant": 139,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Sébastien Giordano",
+      "utilisateur": "Sébastien Giordano",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 99,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Stéphane Van Migom",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Stéphane Van Migom",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24",
+      "quantite": 2,
+      "montant": 248.34,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Thau Conseils",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Younes Bouhaddou",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 109,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Younes Bouhaddou",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-05-03 11:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Scan Ads 4300",
+      "quantite": 1,
+      "montant": 300,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Cinderella Carpentier (Partagée)",
+      "utilisateur": "Cinderella Carpentier (Partagée)",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 110,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Sherley Jouge",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-05-03 11:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Onduleur (Caméra video surveillance)",
+      "quantite": 1,
+      "montant": 100,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-23 12:12:00",
+      "entite": "Bassin de thau",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Jean-Christophe Barbut",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-26 11:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Lenovo 27",
+      "quantite": 1,
+      "montant": 119,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Marion Abadie Aoun",
+      "categorie": "Matériel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 109,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Francois Alliès",
+      "utilisateur": "Francois Alliès",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "AirPods Pro 2",
+      "quantite": 1,
+      "montant": 200,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Laure Michelon-Anastasy",
+      "utilisateur": "Laure Michelon-Anastasy",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Extension Garantie",
+      "quantite": 1,
+      "montant": 75,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Laure Michelon-Anastasy",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "SSD 500GB",
+      "quantite": 1,
+      "montant": 62,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Marion Abadie Aoun",
+      "utilisateur": "Marion Abadie Aoun",
+      "categorie": "Composants",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "SSD 500GB",
+      "quantite": 1,
+      "montant": 62,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Nathalie Ferrere",
+      "utilisateur": "Nathalie Ferrere",
+      "categorie": "Composants",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Chargeur Lenovo",
+      "quantite": 1,
+      "montant": 25,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Nathalie Ferrere",
+      "utilisateur": "Nathalie Ferrere",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24 2K IPS",
+      "quantite": 1,
+      "montant": 169,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Marion Abadie Aoun",
+      "categorie": "Matériel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 29 Wide",
+      "quantite": 1,
+      "montant": 192,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Antoine Ramon",
+      "categorie": "Matériel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "NVME",
+      "quantite": 2,
+      "montant": 131.67,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Marion Abadie Aoun",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:33:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clavier Touches en RAB",
+      "quantite": 1,
+      "montant": 10,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Nicolas Boutier",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:37:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC i5/Ryzen5",
+      "quantite": 1,
+      "montant": 499.17,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Nathalie Ferrere",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:32:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Fond Noir Photo",
+      "quantite": 1,
+      "montant": 31.44,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-22 18:10:00",
+      "entite": "ECS",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Antoine Ramon",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 18:10:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "SoftBox Photo",
+      "quantite": 1,
+      "montant": 37.11,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-22 18:11:00",
+      "entite": "ECS",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Antoine Ramon",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 18:11:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Portable",
+      "quantite": 2,
+      "montant": 302,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-29 16:17:00",
+      "entite": "ECS",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Francois Alliès",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-02-02 10:31:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ordinateur Portable",
+      "quantite": 1,
+      "montant": 998,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-09-02 12:36:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:36:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Testeur RJ45",
+      "quantite": 2,
+      "montant": 11,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-23 14:55:00",
+      "entite": "ECS",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-08-03 09:09:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Pile lr86 9v",
+      "quantite": 1,
+      "montant": 6,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-23 14:56:00",
+      "entite": "ECS",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-08-03 09:09:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clefs USB",
+      "quantite": 4,
+      "montant": 20,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-05-03 14:46:00",
+      "entite": "ECS",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jean-Baptiste Lance",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-05-03 14:46:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ordinateur Portable",
+      "quantite": 1,
+      "montant": 768,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-03-14 13:59:00",
+      "entite": "ECS",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Laure Michelon-Anastasy",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-03-21 09:37:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Jennifer Goube",
+      "utilisateur": "Florence Gatuingt",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Casque Sans-Fils",
+      "quantite": 1,
+      "montant": 160,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Florence Gatuingt",
+      "utilisateur": "Florence Gatuingt",
+      "categorie": "Accessoires audio",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clavier Silencieux",
+      "quantite": 1,
+      "montant": 20,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Jennifer Goube",
+      "utilisateur": "Jennifer Goube",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 2,
+      "montant": 100,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Jennifer Goube",
+      "utilisateur": "Thomas Deljanin-Stojanović",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecrans 24 view",
+      "quantite": 4,
+      "montant": 150,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Jennifer Goube",
+      "utilisateur": "Carla Martin",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Jennifer Goube",
+      "utilisateur": "Thomas Deljanin-Stojanović",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Clavier",
+      "quantite": 1,
+      "montant": 15,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Jennifer Goube",
+      "utilisateur": "Thomas Deljanin-Stojanović",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "HDMI",
+      "quantite": 2,
+      "montant": 15,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Jennifer Goube",
+      "utilisateur": "Jennifer Goube",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:17:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "EarPods",
+      "quantite": 1,
+      "montant": 18,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Sébastien Giordano",
+      "utilisateur": "Clotilde Aubert",
+      "categorie": "Accessoires audio",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 500,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "FBA",
+      "fournisseur": "Denis",
+      "initiateur": "Sébastien Giordano",
+      "utilisateur": "Clotilde Aubert",
+      "categorie": "Matériel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24",
+      "quantite": 1,
+      "montant": 119,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-20 08:48:00",
+      "entite": "FBA",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Jennifer Goube",
+      "categorie": "Matériel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-02-21 18:21:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Camera",
+      "quantite": 1,
+      "montant": 21,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-20 08:49:00",
+      "entite": "FBA",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Carla Martin",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-02-21 18:21:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "RAM",
+      "quantite": 1,
+      "montant": 27.48,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-06-03 16:53:00",
+      "entite": "FBA",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Claire Molina",
+      "categorie": "Composants",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-03-14 13:27:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran Portable",
+      "quantite": 1,
+      "montant": 142,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-16 15:23:00",
+      "entite": "Loïs Holding",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Jérôme Cavailles",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-02-21 10:48:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ethernet",
+      "quantite": 1,
+      "montant": 2.9,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Patrick Mado",
+      "utilisateur": "Aurélie Copin",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "HUB USB",
+      "quantite": 1,
+      "montant": 6,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Patrick Mado",
+      "utilisateur": "Aurélie Copin",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "PC Portable",
+      "quantite": 1,
+      "montant": 482.5,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Patrick Mado",
+      "utilisateur": "Aurélie Copin",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:18:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "HDMI",
+      "quantite": 1,
+      "montant": 10,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Patrick Mado",
+      "utilisateur": "Aurélie Copin",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:42:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24",
+      "quantite": 1,
+      "montant": 200,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Raphaël Vella",
+      "utilisateur": "Raphaël Vella",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:42:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24",
+      "quantite": 1,
+      "montant": 200,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Isabelle Jaux",
+      "utilisateur": "Isabelle Jaux",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:42:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Scan Ads 4300",
+      "quantite": 1,
+      "montant": 300,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Laëtitia Cros",
+      "utilisateur": "Laëtitia Cros",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:42:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Usb vers HDMI",
+      "quantite": 1,
+      "montant": 20,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Raphaël Vella",
+      "utilisateur": "Raphaël Vella",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:42:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Usb vers HDMI",
+      "quantite": 1,
+      "montant": 20,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Isabelle Jaux",
+      "utilisateur": "Isabelle Jaux",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:42:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Earpods",
+      "quantite": 2,
+      "montant": 18,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Mado",
+      "fournisseur": "Denis",
+      "initiateur": "Stéphanie Figueiredo (Partagée)",
+      "utilisateur": "Stéphanie Figueiredo (Partagée)",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-09-02 12:42:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Hub USB",
+      "quantite": 1,
+      "montant": 9,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-21 16:55:00",
+      "entite": "Mado",
+      "fournisseur": "Amazon",
+      "initiateur": "Jean-Baptiste Lance",
+      "utilisateur": "Isabelle Jaux",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-03-14 12:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24",
+      "quantite": 2,
+      "montant": 248.33,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-11-01 15:08:00",
+      "entite": "Montpellier",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Gout",
+      "utilisateur": "Perrine Tailhan",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-11-01 19:16:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran",
+      "quantite": 1,
+      "montant": 89.99,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-16 14:26:00",
+      "entite": "Montpellier",
+      "fournisseur": "Amazon",
+      "initiateur": "Fanny Defossez",
+      "utilisateur": "Frederic Pierre",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-01-22 19:00:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Dock",
+      "quantite": 1,
+      "montant": 100,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-22 18:20:00",
+      "entite": "Montpellier",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Marina Becker",
+      "categorie": "Accessoires",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-02-19 08:52:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ecran 24",
+      "quantite": 2,
+      "montant": 98,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-02-15 11:54:00",
+      "entite": "Montpellier",
+      "fournisseur": "Amazon",
+      "initiateur": "Antoine Gout",
+      "utilisateur": "Benjamin Saury",
+      "categorie": "Materiel informatique",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-05-03 11:20:00"
+      },
+      "etat": "recu"
+    },
+    {
+      "libelle": "Ordinateur Portable",
+      "quantite": 1,
+      "montant": 500,
+      "ref_facture": null,
+      "commentaire": null,
+      "date_creation": "2024-01-18 12:25:00",
+      "entite": "Thau Secretariat",
+      "fournisseur": "Denis",
+      "initiateur": "Antoine Ramon",
+      "utilisateur": "Thau Conseils",
+      "categorie": "Autres",
+      "validation": {
+        "statut": "approuve",
+        "date_validation": "2024-05-03 11:24:00"
+      },
+      "etat": "recu"
+    }
+  ]
+}
