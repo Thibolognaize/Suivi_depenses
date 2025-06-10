@@ -1,7 +1,7 @@
 services:
   db:
     image: mysql:8
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -15,8 +15,8 @@ services:
       - suivi-depenses-network
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 30s
-      timeout: 10s
+      interval: 10s
+      timeout: 5s
       retries: 5
 
   app:
@@ -27,27 +27,12 @@ services:
       db:
         condition: service_healthy
     ports:
-      - "3000:3000"
+      - "3333:3000"
     environment:
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: ${DATABASE_URL_PROD}
     networks:
       - suivi-depenses-network
-
-  import-data:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: builder
-    depends_on:
-      db:
-        condition: service_healthy
-    environment:
-      DATABASE_URL: ${DATABASE_URL}
-    volumes:
-      - .:/app
-    networks:
-      - suivi-depenses-network
-
+ 
 networks:
   suivi-depenses-network:
     driver: bridge

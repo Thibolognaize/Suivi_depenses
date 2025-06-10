@@ -45,7 +45,7 @@ model User {
   name          String?
   email         String?   @unique
   emailVerified DateTime? @map("email_verified")
-  image         String?
+  image         String?   @db.Text
   accounts      Account[]
   sessions      Session[]
 
@@ -178,4 +178,11 @@ enum ValidationStatut {
   en_attente
   approuve
   refuse
+}
+
+model Seed {
+  id         Int      @id @default(autoincrement())
+  executedAt DateTime
+
+  @@map("seed")
 }

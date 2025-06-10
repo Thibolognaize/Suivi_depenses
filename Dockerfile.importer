@@ -1,0 +1,24 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copier les fichiers nécessaires
+COPY package.json tsconfig.scripts.json ./
+COPY prisma ./prisma
+COPY src/scripts/import-data.ts ./src/scripts/import-data.ts
+COPY src/scripts/data.json ./src/scripts/data.json
+
+# Installer les dépendances
+RUN npm install
+
+# Installer ts-node globalement
+RUN npm install -g ts-node
+
+# Générer le client Prisma
+RUN npx prisma generate
+
+# Changer le répertoire de travail pour exécuter le script
+WORKDIR /app/src/scripts
+
+# Exécuter le script d'importation
+CMD ["ts-node", "-P", "../../tsconfig.scripts.json", "import-data.ts"]
